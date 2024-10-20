@@ -5,6 +5,8 @@ export const AdminContext = createContext();
 
 export const AdminProvider = ({ children }) => {
   
+  const Port = `https://smart-watch-ecommerce-mern.onrender.com`;
+
   // Format price to Indian currency
   const formatPrice = (price) => {
     return new Intl.NumberFormat("en-IN", {
@@ -62,7 +64,7 @@ export const AdminProvider = ({ children }) => {
 
     const removeProduct = async (id) => {
       try {
-        await axios.post(`http://localhost:4100/removeproduct`,{
+        await axios.post(`${Port}/removeproduct`,{
           id: id
         });
         await fetchProducts();
@@ -73,7 +75,7 @@ export const AdminProvider = ({ children }) => {
         
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:4100/allproducts');
+        const response = await axios.get(`${Port}/allproducts`);
         setAllProducts(response.data);
       } catch (error) {
         console.error("Error in fetching product details :" ,error);
@@ -92,6 +94,7 @@ export const AdminProvider = ({ children }) => {
         fetchProducts,
         removeProduct,
         allProducts,
+        Port,
       }}
     >
       {children}

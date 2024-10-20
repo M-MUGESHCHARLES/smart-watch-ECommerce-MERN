@@ -12,6 +12,9 @@ const ShopContext = createContext();
 // Create provider
 export const ShopProvider = ({ children }) => {
 
+  const Port = `https://smart-watch-ecommerce-mern.onrender.com`;
+
+
   // const [products , setProducts] = useState([]);
   
   // local storage product json copy
@@ -103,7 +106,7 @@ export const ShopProvider = ({ children }) => {
     const fetchCartData = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:4100/getCartData", {
+        const response = await axios.get(`${Port}/getCartData`, {
           headers: {
             Authorization: `Bearer ${token}`, // Pass the token in the headers
           },
@@ -187,7 +190,7 @@ const handleAddToCart = async (product, selectedColor, quantity) => {
     // Send the updated cart data to the backend
     try {
       const response = await axios.post(
-        `http://localhost:4100/addToCart`,
+        `${Port}/addToCart`,
         {
           email: userEmail, // Use the already stored userEmail
           product: {
@@ -274,7 +277,7 @@ const handleAddToCart = async (product, selectedColor, quantity) => {
     try {
       // Make a POST request to the /removeFromCart API
       const response = await axios.post(
-        "http://localhost:4100/removeFromCart",
+        `${Port}/removeFromCart`,
         {
           productId: id,
           selectedColor: selectedColor,

@@ -6,6 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUp({ changeKey }) {
 
+  const Backend = process.env.Deployed_Backend_Link;
+
   const [showPassword, setShowPassword] = useState(false);
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState("");
@@ -16,7 +18,10 @@ const handleSignUp = async (e) => {
   const formData = { name: userName, email: email, password: password };
   // console.log("Form Data:", formData);
   try {
-    const response = await axios.post("http://localhost:4100/signup", formData);
+    const response = await axios.post(
+      `https://smart-watch-ecommerce-mern.onrender.com/signup`,
+      formData
+    );
     const responseData = response.data;
     if (responseData.success) {
       localStorage.setItem("token", responseData.token);

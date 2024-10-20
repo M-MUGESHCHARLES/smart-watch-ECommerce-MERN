@@ -7,7 +7,7 @@ import { useAdminContext } from "../../AdminContext";
 
 export default function AddProductForm () {
 
-    const {productCategory } = useAdminContext();
+    const {productCategory, Port } = useAdminContext();
 
     const [productDetails , setProductDetails] =useState({
       name:'',
@@ -72,7 +72,7 @@ export default function AddProductForm () {
       try {
         // Send the product details along with the images to the backend
         const response = await axios.post(
-          `http://localhost:4100/addproduct`,
+          `${Port}/addproduct`,
           formData,
           { headers: { "Content-Type": "multipart/form-data" } }
         );

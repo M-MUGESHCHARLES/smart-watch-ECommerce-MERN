@@ -5,6 +5,8 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 export default function SignIn({ changeKey }) {
+
+
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -15,7 +17,10 @@ export default function SignIn({ changeKey }) {
     e.preventDefault();
     const formData = { email: email, password: password };
     try {
-      const response = await axios.post("http://localhost:4100/login", formData );
+      const response = await axios.post(
+        `https://smart-watch-ecommerce-mern.onrender.com/login`,
+        formData
+      );
       const responseData = response.data;
       if (responseData.success) {
         localStorage.setItem("token", responseData.token);
