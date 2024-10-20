@@ -1,0 +1,49 @@
+
+#SideContent {
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+/*------------------------------------------ Header.js */
+
+#Header {
+    background-color: #F5EDED;
+}
+
+#Header #Admin-Profile {
+    height: 30px !important;
+    width: 30px !important;
+}
+
+/* ---------------------------------------- SideBar.js */
+.vertical-divider {
+    flex-shrink: 0;
+    width: 0.7rem;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, .1); */
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.horizontal-divider {
+    width: 100%;
+    height: 0.7rem;
+    /* background-color: rgba(0, 0, 0, .1); */
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+/* ----------------------------------- TagsSelect.js */
+
+.tag-close {
+    cursor: pointer;
+}
+
+/* ------------------------------------ ProductLists.js */
+
+#Product-Image {
+    height: fit-content;
+}
+

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+.ubuntu-sans {
+    font-family: "Ubuntu Sans", sans-serif;
+}
+
+.urbanist {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 800;
+        font-style: italic;
+        font-size: x-large;
+        color: #78A083 ;
+}
+
+.Roboto {
+    font-family: "Roboto" , sans-serif;
+}
+
+.Cinzel {    
+    font-family: "Cinzel", serif;
+}
+
+.noto-serif {
+  font-family: "Noto Serif", serif;
+}
+
+.fs-smaller {
+    font-size: smaller !important;
+}
+
+.fs-large {
+    font-size: large !important ;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Global scrollbar styles */
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px #2f2e2d; 
+  border-radius:10px;
+  background-color:#e9ecef;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffc107;
+  border-radius: 50px;
+}
+
