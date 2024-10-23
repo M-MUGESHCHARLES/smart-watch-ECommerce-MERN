@@ -27,12 +27,14 @@ app.use(express.urlencoded({ extended: true }));
 const UserSchema = require("./models/UserSchema");
 
 // Key
+// // use your secret key  as well as your database username and password here as a value for the variables created.
 
 const secretKey = process.env.JWT_SECRET;
 const  DB_UserName = process.env.DB_UserName;
 const DB_Password = process.env.DB_Password;
 
 //======================================================================== Connect to MongoDB
+// // use your database username and passsword 
 
 mongoose.connect(`mongodb+srv://${DB_UserName}:${DB_Password}@cluster0.9rpuwmq.mongodb.net/smart-watch`)
 .then(() => console.log("Connected to MongoDB"))
